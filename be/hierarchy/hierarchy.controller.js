@@ -1,6 +1,9 @@
+const service= require("./hierarchy.service")
 
-function getHierarchyForId(id) {
-   console.log('Frank Snow -> Deena Duarte -> David Suarez');
+async function getHierarchyForId(id) {
+   let parents=await service.getParentsForId(id);
+   const result=parents.join(" -> ")
+   console.log( result );
 }
 
 
