@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const _ = require('lodash');
 const controller = require('./members.controller');
+const restrictHierarchy = require('../middleware/restrictToHierarchy');
 
 router.get('/', getMembers);
-router.get('/:id', getMemberById);
+router.get('/:id',restrictHierarchy, getMemberById);
 
 async function getMembers(req, res, next) {
     try {
