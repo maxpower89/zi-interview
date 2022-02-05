@@ -7,7 +7,7 @@ async function getParentsForId(id) {
        current!=undefined;
        current=current.level>1?await dbService.getHierarchyItemById(current.parentMemberId):undefined
    ){
-      parents[current.level-1]=current.name;
+      parents[current.level-1]= {memberId:current.memberId,name:current.name};
    }
    return parents;
 

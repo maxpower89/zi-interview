@@ -16,4 +16,6 @@
 * There was a problem setting up the service. Since somewhere earlier in 2020 chrome required to set cookies with a sameSite Lax flag. Which the cookie service doesn't do by default.  So i added it as a parameter
 * *Exercise 1*
   * Felt really tempted to implement the loader etc, however this was not described in the task so i skipped it, and decided to make a note of it. As an important aspect of work a developer to be able to follow specification, and communicate sugestions to the product owner.
-  * 
+* *Exercise 2*
+  * Been in doubt whether to use ngrx, because  this is not global page state. I decided to use it because i can immagine a scenario where you would always want to keep displaying the bar. Of course i assume that if there is company policy on whether stores are desired or not. I could immagine for the sake of consistency to always use stores for example. 
+* 
