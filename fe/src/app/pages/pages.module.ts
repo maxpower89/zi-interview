@@ -11,6 +11,7 @@ import {MembersService} from './services/members.service';
 import {HierarchyComponent} from "src/app/pages/components/hierarchy/hierarchy.component";
 import {HierarchyEffects} from "src/app/ngrx/effect/hierarchy.effects";
 import {HierarchyService} from "src/app/pages/services/hierarchy.service";
+import {MemberComponent} from "src/app/pages/member/member.component";
 
 
 
@@ -25,7 +26,8 @@ import {HierarchyService} from "src/app/pages/services/hierarchy.service";
     MembersComponent,
     NavBarComponent,
     PagesComponent,
-    HierarchyComponent
+    HierarchyComponent,
+    MemberComponent
   ],
   providers: [
     MembersService,

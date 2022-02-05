@@ -1,0 +1,28 @@
+@import '../../../styles/base';
+
+:host {
+  overflow: auto;
+  margin-top: $distance-from-nav-bar;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.15fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 70px;
+
+  .member-info{
+    border:1px solid $main-border-color;
+    .top{
+      display:flex;
+      gap:1em;
+      .thumb{
+        width:5em;
+      }
+    }
+  }
+
+}
+

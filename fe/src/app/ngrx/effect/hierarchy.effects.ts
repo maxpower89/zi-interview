@@ -19,6 +19,7 @@ export class HierarchyEffects {
       .pipe(
         ofType(FetchHierarchy),
         mergeMap((action) => {
+          console.log(action)
           return this.hierarchyService.getHierarchy(action.id)
             .pipe(
               map((resp) => FetchHierarchySuccess({hierarchy: _.get(resp, 'parents')})),

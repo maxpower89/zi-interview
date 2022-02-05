@@ -11,3 +11,14 @@ export const FetchMembersSuccess = createAction(
   props<{ total: number, members: Array<Member> }>()
 );
 export const FetchMembersFailure = createAction('[Family] FETCH_MEMBERS_FAILURE');
+
+
+export const FetchMember = createAction(
+  '[Members] FETCH_MEMBER',
+  props<{ id: string }>()
+);
+export const FetchMemberSuccess = createAction(
+  '[Members] FETCH_MEMBER_SUCCESS',
+  props<{ member: Member }>()
+);
+export const FetchMemberFailure = createAction('[Family] FETCH_MEMBER_FAILURE', props<{ hasPermission: boolean }>());

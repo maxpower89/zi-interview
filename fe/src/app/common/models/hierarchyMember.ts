@@ -1,4 +1,4 @@
 export interface HierarchyMember {
-  id: string;
+  memberId: string;
   name: string;
 }

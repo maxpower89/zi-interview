@@ -9,10 +9,15 @@ import {Subscription} from 'rxjs';
 })
 export class HierarchyComponent implements OnInit {
   @Input() hierarchy: Array<ListItem>;
+  @Output() itemSelected = new EventEmitter<ListItem>();
   constructor() {
   }
 
   ngOnInit(): void {
 
+  }
+
+  selectItem(item: ListItem) {
+    this.itemSelected.emit(item);
   }
 }

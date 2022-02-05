@@ -4,4 +4,5 @@
 
 <zi-nav-bar></zi-nav-bar>
 
-<zi-members></zi-members>
+<zi-members *ngIf="!id"></zi-members>
+<member *ngIf="id" [memberId]="id"></member>

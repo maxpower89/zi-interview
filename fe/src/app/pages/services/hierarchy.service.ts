@@ -11,6 +11,7 @@ export class HierarchyService {
   constructor(private http: HttpClient) { }
 
   getHierarchy(id:string)  {
+    console.log(id)
     return this.http.get(`${this.BASE_DOMAIN}/hierarchy/${id}`);
   }
 

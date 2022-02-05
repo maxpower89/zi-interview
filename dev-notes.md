@@ -18,4 +18,5 @@
   * Felt really tempted to implement the loader etc, however this was not described in the task so i skipped it, and decided to make a note of it. As an important aspect of work a developer to be able to follow specification, and communicate sugestions to the product owner.
 * *Exercise 2*
   * Been in doubt whether to use ngrx, because  this is not global page state. I decided to use it because i can immagine a scenario where you would always want to keep displaying the bar. Of course i assume that if there is company policy on whether stores are desired or not. I could immagine for the sake of consistency to always use stores for example. 
-* 
+* *Exercise 3*
+  * I was told that the exercise should only take 4 hours. So didn't implement the loading animations etc. since this was not part of the exercise. This results in an incorrect display of the "oops message."

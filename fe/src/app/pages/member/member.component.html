@@ -1,0 +1,15 @@
+<div class="container">
+  <div>
+    <zi-button (click)="back()">Back</zi-button>
+  </div>
+  <div class="member-info" *ngIf="hasPermission$|async">
+    <div class="top">
+      <div class="thumb"><img src="//upload.wikimedia.org/wikipedia/commons/7/7e/Circle-icons-profile.svg"></div>
+      <div class="info"> {{(member$|async).name}}</div>
+    </div>
+    {{(member$|async).description}}
+  </div>
+  <div class="member-info" *ngIf="!(hasPermission$|async)">
+    Oops, you are not authorized to see this member details. Please go back to the main pages and try somebody else.
+  </div>
+</div>

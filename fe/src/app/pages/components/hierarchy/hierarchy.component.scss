@@ -1,6 +1,7 @@
+@import "../../../../styles/base";
 .hierarchy{
   height:100%;
-  border:1px solid rgba(151, 151, 151, 0.5);
+  border:1px solid $main-border-color;
   margin:auto;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@
       .link{
         color:blue;
         text-decoration: underline;
+        cursor: pointer;
       }
     }
     .item:not(:last-child):after{

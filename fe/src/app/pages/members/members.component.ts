@@ -9,6 +9,7 @@ import {map} from "rxjs/operators";
 import {getHierarchySelector, HierarchyState} from "src/app/ngrx/state/hierarchy.state";
 import {FetchHierarchy} from "src/app/ngrx/action/hierarchy.actions";
 import {HierarchyMember} from "src/app/common/models/hierarchyMember";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -24,7 +25,7 @@ export class MembersComponent implements OnInit, OnDestroy {
   selectedMember: ListItem;
   isLoading: boolean;
 
-  constructor(private membersStore: Store<MembersState>, private hierarchyStore:Store<HierarchyState>) {}
+  constructor(private membersStore: Store<MembersState>, private hierarchyStore:Store<HierarchyState>, private router:Router) {}
 
   ngOnInit() {
     this.membersStore.dispatch(FetchMembers());
@@ -43,7 +44,7 @@ export class MembersComponent implements OnInit, OnDestroy {
       map((hierarchyState): ListItem[] => {
         return hierarchyState.map((member: HierarchyMember) => {
           return {
-            id: member.id,
+            id: member.memberId,
             label: member.name
           }
         })
@@ -56,7 +57,10 @@ export class MembersComponent implements OnInit, OnDestroy {
   memberSelected(member) {
     this.selectedMember=member;
     this.hierarchyStore.dispatch(FetchHierarchy(member))
+  }
 
+  hierarchySelected(member){
+    this.router.navigate(["app",member.id])
   }
 
   ngOnDestroy() {
