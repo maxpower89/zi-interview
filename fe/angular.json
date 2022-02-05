@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "zoom-family": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zoom-family"
+    }
+  },
+  "defaultProject": "zoom-family",
+  "cli": {
+    "analytics": "9029d9a6-6142-4b73-982e-43bb0998aa1d"
+  }
 }

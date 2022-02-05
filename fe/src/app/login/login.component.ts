@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
         finalize(() => this.isLoading = false),
         tap((resp: { account: any, session: string }) => {
           const { session } = resp;
-          this.cookiesService.set(AppConfig.SESSION_COOKIE_NAME, session, 365, '/');
+          this.cookiesService.set(AppConfig.SESSION_COOKIE_NAME, session, 365, '/',null,null,"Lax");
           this.router.navigate(['/app']);
         }),
         catchError((err) => {
