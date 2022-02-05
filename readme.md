@@ -1,6 +1,8 @@
 #Exercise
 This project is the result for my interview exercise at zoominfo. I doccumented all my findings on my way.
 
+I made branches for every step on the way to easily navigate the progress.
+
 ##Backend
 * There were problems to get the backend to run on mac os. It turned out that for mac os port 5000 is taken by default. The solution this was turning off airplay on mac os. 
 * *exercise 1*:
