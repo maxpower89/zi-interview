@@ -14,3 +14,6 @@
   
 **Frontend**
 * There was a problem setting up the service. Since somewhere earlier in 2020 chrome required to set cookies with a sameSite Lax flag. Which the cookie service doesn't do by default.  So i added it as a parameter
+* *Exercise 1*
+  * Felt really tempted to implement the loader etc, however this was not described in the task so i skipped it, and decided to make a note of it. As an important aspect of work a developer to be able to follow specification, and communicate sugestions to the product owner.
+  * 

@@ -1,10 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {ListItem} from '../../common/models/list-item';
 import {Observable, Subscription} from 'rxjs';
 import {Member} from '../../common/models/member';
-import {MembersState} from "../../ngrx/state/members.state";
+import {getMembersSelector, MembersState} from "../../ngrx/state/members.state";
 import {FetchMembers} from "../../ngrx/action/members.actions";
 import {Store} from "@ngrx/store";
+import {map} from "rxjs/operators";
 
 
 @Component({
@@ -23,11 +24,23 @@ export class MembersComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.membersStore.dispatch(FetchMembers());
+    this.listItems$=this.membersStore.select(getMembersSelector).pipe(
+      map((memberState): ListItem[] => (
+        memberState.map((member:Member)=>{
+          return {
+            id: member.id ,
+            label: member.name
+          }
+        })
+      ))
+    );
+
 
   }
 
   memberSelected(member) {
-
+    console.log("selected",member);
+    this.selectedMember=member;
   }
 
   ngOnDestroy() {

@@ -5,7 +5,7 @@
   </div>
 
   <div class="container-bottom">
-    <zi-list [headerText]="'Members'">
+    <zi-list [headerText]="'Members'" [items]="listItems$|async" (itemSelected)="memberSelected($event)" [selectedItem]="selectedMember">
     </zi-list>
   </div>
 
